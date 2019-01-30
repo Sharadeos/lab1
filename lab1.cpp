@@ -273,28 +273,18 @@ void movement()
         p->velocity.y += GRAVITY;
 	    //check for collision with shapes...
 	    Shape *s = &g.box;
-        
-
         // more than one particle
         // have to loop
-        
-
         // missing height of the box
         if (p->s.center.y < s->center.y + s->height && 
             p->s.center.y > s->center.y - s->height &&
             p->s.center.x > s->center.x - s->width &&
             p->s.center.x < s->center.x + s->width) {
-        
-	       cout << "collision" << endl;
-           p->velocity.y = -p->velocity.y;
-           //p->s.center.y += 20;
-		    //g.n = 0;
+			cout << "collision" << endl;
+			p->velocity.y = -p->velocity.y;
+			//p->s.center.y += 20;
+			//g.n = 0;
 	    }
-
-        
-
-
-
 	    //check for off-screen
 	    if (p->s.center.y < 0.0) {
 		    cout << "off screen" << endl;  
